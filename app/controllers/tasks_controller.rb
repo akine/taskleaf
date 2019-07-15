@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @tasks = curretn_user.tasks
+    @tasks = current_user.tasks
   end
 
   def show
