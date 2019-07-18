@@ -63,4 +63,6 @@ Rails.application.configure do
 
   # ログレベルの設定
   # config.log_level = :warn
+
+  config.active_job.queue_adapter = :sidekiq
 end
