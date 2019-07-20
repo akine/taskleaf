@@ -5,7 +5,7 @@ html
       | Taskleaf
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
@@ -19,8 +19,7 @@ html
           li.nav-item= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link'
         - else
           li.nav-item= link_to 'ログイン', login_path, class: 'nav-link'
-
     .container
       - if flash.notice.present?
         .alert.alert-success= flash.notice
-    = yield
+      = yield
